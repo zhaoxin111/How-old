@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.how_old.MainActivity" >
+
+    <Button
+        android:id="@+id/button_getImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="get image" />
+
+    <Button
+        android:id="@+id/button_detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@id/button_getImage"
+        android:text="detect" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_detect"
+        android:layout_alignTop="@+id/button_detect"
+        android:layout_toLeftOf="@+id/button_detect"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="click  right"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_getImage"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/t4" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center"
+            />
+        <TextView 
+            android:id="@+id/tv_age"
+            android:text="23"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="22sp"
+            android:background="@drawable/hint"
+            android:textColor="#ffff00ff"
+            android:gravity="center"
+            android:drawableLeft="@drawable/male"
+            android:visibility="invisible"
+            
+            />
+        
+        
+    </FrameLayout>
+
+</RelativeLayout>
